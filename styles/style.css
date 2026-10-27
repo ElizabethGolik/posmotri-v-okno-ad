@@ -115,6 +115,47 @@ html {
   line-height: 0.9;
 }
 
+.search-form__textfield {
+  inline-size: 225px;
+  padding: 1px 0;
+  border: 0;
+  border-block: 1px solid currentColor;
+  color: #fff;
+  font: inherit;
+  line-height: 1;
+  appearance: none;
+  background-color: transparent;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  inline-size: 19px;
+  block-size: 19px;
+  padding: 1px;
+  border: 1px solid #fff;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: '';
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  opacity: 0;
+  background-color: #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
 h1,
 h2,
 h3,
